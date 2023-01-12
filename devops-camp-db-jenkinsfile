@@ -26,6 +26,7 @@ pipeline {
                 }
             }
         }
+    }
         stage('DB changes: true') {
             when {
                environment name: 'BUILD_DB', value: 'true'
