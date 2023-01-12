@@ -2,16 +2,12 @@ pipeline {
     agent {
         label 'jenkins-agent'
     }
-
-
     environment {
         PIPELINE_HASH = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
         HARBOR_REGISTRY = 'harbor.dev.afsmtddso.com'
         HARBOR_PROJECT = 'jamesvtran-harbor-project'
         DB_IMAGE_NAME = 'db'
     }
-
-
     //TODO: add environment variables
     stages {
         //TODO: add stages to pipeline
