@@ -3,6 +3,7 @@ pipeline {
         label 'jenkins-agent'
     }
     //TODO("Lab 4 - Artifact Management"): add environment variables
+    //testing a build trigger 2
 
 environment {
         PIPELINE_HASH = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
